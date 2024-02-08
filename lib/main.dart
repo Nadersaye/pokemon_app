@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokemon_app/features/onboarding/presentation/views/onboarding_view.dart';
 
 void main() {
   runApp(const PokemonApp());
@@ -9,6 +10,12 @@ class PokemonApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      title: 'Pokemon App',
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+      ),
+      home: const OnboardingView(),
+    );
   }
 }
