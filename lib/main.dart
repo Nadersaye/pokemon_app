@@ -11,9 +11,13 @@ class PokemonApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Pokemon App',
       theme: ThemeData(
         primarySwatch: Colors.purple,
+        buttonTheme: const ButtonThemeData(
+          buttonColor: Colors.red,
+        ),
       ),
       home: const OnboardingView(),
     );
