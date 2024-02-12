@@ -1,14 +1,48 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:pokemon_app/core/functions/cached_my_network_image.dart';
+
+import '../../../../../core/utils/app_images.dart';
+import '../../../domain/entities/pokemon_details_entity.dart';
+import 'pokemon_details_body_data.dart';
 
 class PokemonDetailsViewBody extends StatelessWidget {
-  const PokemonDetailsViewBody({super.key});
+  final PokemonDetailsEntity pokemon;
+  const PokemonDetailsViewBody({super.key, required this.pokemon});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: <Widget>[
-        Text('PokemonDetailsViewBody'),
-      ],
+    return SingleChildScrollView(
+      child: Container(
+        padding: EdgeInsets.only(
+            left: 10, right: 10, top: MediaQuery.sizeOf(context).height * .25),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(Assets.imageBackgroundHome),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Stack(
+          clipBehavior: Clip.none,
+          children: [
+            PokemonDetailsBodyData(
+              pokemon: pokemon,
+            ),
+            Positioned(
+                left: 0,
+                right: 0,
+                top: -180,
+                child: Center(
+                  child: cachedMyNetworkImage(
+                    imageUrl:
+                        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/3.png',
+                    width: 200,
+                    height: 2500,
+                  ),
+                ))
+          ],
+        ),
+      ),
     );
   }
 }
