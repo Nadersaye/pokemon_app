@@ -9,4 +9,9 @@ class ApiService {
     final response = await _dio.get(baseUrl + endPoint);
     return response.data;
   }
+
+  Future<Map<String, dynamic>> getPkemonDetails(String url) async {
+    final response = await _dio.get(url);
+    return response.data;
+  }
 }
