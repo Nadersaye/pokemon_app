@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:pokemon_app/core/utils/app_images.dart';
-import 'package:pokemon_app/core/utils/app_styles.dart';
+import 'onboarding_body_column.dart';
 
 class OnboardingViewBody extends StatelessWidget {
   const OnboardingViewBody({super.key});
@@ -17,26 +16,7 @@ class OnboardingViewBody extends StatelessWidget {
           fit: BoxFit.fill,
         ),
       ),
-      child: Column(
-        children: [
-          Gap(MediaQuery.sizeOf(context).height * .225),
-          Text(
-            'welcome !',
-            style: AppStyles.style32(context),
-          ),
-          const Gap(20),
-          MaterialButton(
-            height: 50,
-            shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.horizontal(
-                    left: Radius.circular(25), right: Radius.circular(25))),
-            minWidth: MediaQuery.sizeOf(context).width * .65,
-            color: Colors.red,
-            onPressed: () {},
-            child: Text('see the list of pokemons'.toUpperCase()),
-          )
-        ],
-      ),
+      child: const OnBoardingBodyColumn(),
     );
   }
 }
