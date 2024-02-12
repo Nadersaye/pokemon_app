@@ -22,11 +22,11 @@ class PokemonDetails extends PokemonDetailsEntity {
     this.weight,
   }) : super(
             pokemonId: id,
-            pokemonname: name ?? 'un known',
-            pokemonimageUrl: sprites?.other?.home?.frontDefault ?? '',
-            pokemonheight: height ?? 0,
-            pokemonweight: weight ?? 0,
-            pokemontypes: types?.map((e) => e.type?.name ?? '').toList() ?? [],
+            pokemonName: name ?? 'un known',
+            pokemonImageUrl: sprites?.other?.home?.frontDefault ?? '',
+            pokemonHeight: height ?? 0,
+            pokemonWeight: weight ?? 0,
+            pokemonTypes: types?.map((e) => e.type?.name ?? '').toList() ?? [],
             hp: stats?.first.baseStat ?? 0,
             attack: stats?.elementAt(1).baseStat ?? 0,
             defense: stats?.elementAt(2).baseStat ?? 0,
@@ -45,7 +45,7 @@ class PokemonDetails extends PokemonDetailsEntity {
       stats: (json['stats'] as List<dynamic>?)
           ?.map((e) => ParentStat.fromJson(e as Map<String, dynamic>))
           .toList(),
-      types: (json['types'] as List<ParentType>?)
+      types: (json['types'] as List<dynamic>?)
           ?.map((e) => ParentType.fromJson(e as Map<String, dynamic>))
           .toList(),
       weight: json['weight'] as int?,
