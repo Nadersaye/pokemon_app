@@ -25,21 +25,6 @@ class OnBoardingBodyColumn extends StatelessWidget {
           text: AppStrings.welcomeViewButtonText,
           onPressed: () {
             AppRouter.router.push(AppRouter.home);
-            /*AppRouter.router.push(AppRouter.pokemonDetails,
-                extra: PokemonDetailsEntity(
-                    pokemonTypes: ['grass', 'water', 'fire'],
-                    pokemonId: 3,
-                    pokemonName: 'khgjhgjhg',
-                    pokemonImageUrl:
-                        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/3.png',
-                    pokemonHeight: 30,
-                    pokemonWeight: 90,
-                    hp: 40,
-                    attack: 60,
-                    defense: 50,
-                    specialAttack: 65,
-                    specialDefense: 150,
-                    speed: 80));*/
           },
         )
       ],
