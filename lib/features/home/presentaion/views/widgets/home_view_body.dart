@@ -25,6 +25,7 @@ class HomeViewBody extends StatelessWidget {
               style: AppStyles.style20(context)),
           const Gap(10),
           CustomMaterielButton(
+              onPressed: () {},
               width: MediaQuery.sizeOf(context).width * .4,
               text: AppStrings.homepokemonViewButtonText),
           const Gap(10),
