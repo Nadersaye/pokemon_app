@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pokemon_app/features/home/domain/entities/pokemon_details_entity.dart';
+import 'widgets/custom_appbar.dart';
 import 'widgets/pokemon_details_view_body.dart';
 
 class PokemonDetailsView extends StatelessWidget {
@@ -8,12 +9,12 @@ class PokemonDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: const Text("pokemon"),
-        ),
-        body: PokemonDetailsViewBody(
-          pokemon: pokemonDetails,
-        ));
+    return SafeArea(
+      child: Scaffold(
+          appBar: const CustomAppBar(),
+          body: PokemonDetailsViewBody(
+            pokemon: pokemonDetails,
+          )),
+    );
   }
 }
