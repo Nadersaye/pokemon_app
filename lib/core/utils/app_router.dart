@@ -1,7 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:pokemon_app/features/home/domain/entities/pokemon_details_entity.dart';
 import 'package:pokemon_app/features/onboarding/presentation/views/onboarding_view.dart';
-
 import '../../features/home/presentaion/views/home_view.dart';
 import '../../features/home/presentaion/views/pokemon_details_view.dart';
 
