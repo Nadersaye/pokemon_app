@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokemon_app/core/utils/app_colors.dart';
 import 'package:shimmer/shimmer.dart';
 
 Shimmer customSkelton(
@@ -7,11 +8,11 @@ Shimmer customSkelton(
     double? opacity,
     double? borderRaduis}) {
   return Shimmer.fromColors(
-    baseColor: Colors.grey.withOpacity(0.5),
-    highlightColor: Colors.white,
+    baseColor: AppColors.greyColor.withOpacity(0.5),
+    highlightColor: AppColors.whiteColor,
     child: Container(
       decoration: BoxDecoration(
-        color: Colors.grey.withOpacity(opacity ?? .5),
+        color: AppColors.greyColor.withOpacity(opacity ?? .5),
         borderRadius: BorderRadius.circular(borderRaduis ?? 18),
       ),
       width: width,
