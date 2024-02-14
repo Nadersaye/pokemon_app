@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pokemon_app/core/functions/cached_my_network_image.dart';
+import 'package:pokemon_app/core/utils/app_colors.dart';
 import 'package:pokemon_app/features/home/domain/entities/pokemon_details_entity.dart';
 import 'custom_pokemon_main_details_list_item_data.dart';
 
@@ -14,11 +15,11 @@ class CustomPokemonMainDetailsListItem extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 10),
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.whiteColor,
         borderRadius: BorderRadius.circular(10),
         boxShadow: const [
           BoxShadow(
-            color: Colors.black12,
+            color: AppColors.black12Color,
             blurRadius: 10,
             offset: Offset(0, 5),
           )
