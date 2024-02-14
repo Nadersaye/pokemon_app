@@ -23,9 +23,6 @@ class _CustomPokemonMainDetailsListViewConsumerState
     if (data is FetchPokemonDetailsLoaded) {
       pokemons.addAll(data.pokemons);
     }
-    /*if (data is FetchPokemonDetailsLoading) {
-      return const Center(child: CircularProgressIndicator());
-    } else*/
     if (data is FetchPokemonDetailsPaginationLoading ||
         data is FetchPokemonDetailsPaginationError ||
         data is FetchPokemonDetailsLoaded) {
