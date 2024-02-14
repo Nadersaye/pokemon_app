@@ -21,9 +21,8 @@ class CustomPerformanceListViewItem extends StatelessWidget {
             child: Text(
               performanceItem.title.toUpperCase(),
               style: AppStyles.style20(context).copyWith(
-                color: AppColors.performanceTextColor,
-                //fontFamily: 'sans-serif-condensed-medium'
-              ),
+                  color: AppColors.performanceTextColor,
+                  fontFamily: 'sans-serif-condensed'),
             ),
           ),
         ),
