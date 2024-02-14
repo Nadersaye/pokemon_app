@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pokemon_app/core/utils/app_colors.dart';
+import 'package:pokemon_app/core/utils/app_styles.dart';
 
 class CustomMaterielButton extends StatelessWidget {
   final double width;
@@ -19,9 +21,12 @@ class CustomMaterielButton extends StatelessWidget {
           borderRadius: BorderRadius.horizontal(
               left: Radius.circular(25), right: Radius.circular(25))),
       minWidth: width,
-      color: Colors.red,
+      color: AppColors.redColor,
       onPressed: onPressed,
-      child: Text(text.toUpperCase()),
+      child: Text(
+        text.toUpperCase(),
+        style: AppStyles.style16(context).copyWith(color: AppColors.whiteColor),
+      ),
     );
   }
 }
