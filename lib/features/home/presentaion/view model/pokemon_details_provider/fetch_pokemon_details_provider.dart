@@ -16,11 +16,6 @@ class FetchPokemonDetailsNotifier
       : super(FetchPokemonDetailsInitial());
 
   Future fetchPokemonDetails({int pageNumber = 0}) async {
-    /*if (pageNumber == 0) {
-      state = FetchPokemonDetailsLoading();
-    } else {
-      state = FetchPokemonDetailsPaginationLoading();
-    }*/
     if (pageNumber > 0) {
       state = FetchPokemonDetailsPaginationLoading();
     }
