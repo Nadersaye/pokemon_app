@@ -1,4 +1,5 @@
 abstract class AppStrings {
+  static const defaultAppbarTitle = 'Pokemon App';
   static const attack = 'atk';
   static const hp = 'hp';
   static const defense = 'def';
