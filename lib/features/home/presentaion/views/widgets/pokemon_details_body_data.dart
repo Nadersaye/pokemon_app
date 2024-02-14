@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokemon_app/core/utils/app_colors.dart';
 import 'package:pokemon_app/features/home/domain/entities/pokemon_details_entity.dart';
 import 'custom_pokemon_column.dart';
 
@@ -14,7 +15,7 @@ class PokemonDetailsBodyData extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(left: 10, right: 10, top: 80, bottom: 10),
       decoration: const BoxDecoration(
-        color: Colors.white,
+        color: AppColors.whiteColor,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
