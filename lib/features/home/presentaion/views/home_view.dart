@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../view model/pokemon_details_provider/fetch_pokemon_details_provider.dart';
+import 'widgets/custom_appbar.dart';
 import 'widgets/home_view_body.dart';
 
 class HomeView extends ConsumerStatefulWidget {
@@ -19,11 +20,11 @@ class _HomeViewState extends ConsumerState<HomeView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Pokemon App'),
+    return const SafeArea(
+      child: Scaffold(
+        appBar: CustomAppBar(),
+        body: HomeViewBody(),
       ),
-      body: const HomeViewBody(),
     );
   }
 }
