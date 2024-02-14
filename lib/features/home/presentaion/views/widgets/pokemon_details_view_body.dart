@@ -1,7 +1,5 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:pokemon_app/core/functions/cached_my_network_image.dart';
-
 import '../../../../../core/utils/app_images.dart';
 import '../../../domain/entities/pokemon_details_entity.dart';
 import 'pokemon_details_body_data.dart';
@@ -34,10 +32,9 @@ class PokemonDetailsViewBody extends StatelessWidget {
                 top: -180,
                 child: Center(
                   child: cachedMyNetworkImage(
-                    imageUrl:
-                        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/3.png',
+                    imageUrl: pokemon.pokemonImageUrl,
                     width: 200,
-                    height: 2500,
+                    height: 250,
                   ),
                 ))
           ],

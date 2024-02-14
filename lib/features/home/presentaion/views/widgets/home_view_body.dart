@@ -3,14 +3,11 @@ import 'package:gap/gap.dart';
 import 'package:pokemon_app/core/utils/app_strings.dart';
 import 'package:pokemon_app/core/utils/app_styles.dart';
 import 'package:pokemon_app/core/widgets/custom_material_button.dart';
-import 'package:pokemon_app/features/home/domain/entities/pokemon_details_entity.dart';
-
 import '../../../../../core/utils/app_images.dart';
-import 'custom_pokemon_main_details_list_item.dart';
+import 'custom_pokemon_main_details_listview_consumer.dart';
 
 class HomeViewBody extends StatelessWidget {
-  final PokemonDetailsEntity pokemon;
-  const HomeViewBody({super.key, required this.pokemon});
+  const HomeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +28,7 @@ class HomeViewBody extends StatelessWidget {
               width: MediaQuery.sizeOf(context).width * .4,
               text: AppStrings.homepokemonViewButtonText),
           const Gap(10),
-          CustomPokemonMainDetailsListItem(pokemon: pokemon),
+          const Expanded(child: CustomPokemonMainDetailsListViewConsumer()),
         ],
       ),
     );

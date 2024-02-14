@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokemon_app/core/utils/app_strings.dart';
 import '../../../domain/entities/pokemon_details_entity.dart';
 import 'custom_weight_value.dart';
 
@@ -19,11 +20,11 @@ class CustomPokemonDetailsRowData extends StatelessWidget {
         children: [
           CustomWeightValue(
             value: pokemon.pokemonWeight,
-            text: 'kg',
+            text: AppStrings.weightUnitMeasurementText,
           ),
           CustomWeightValue(
             value: pokemon.pokemonHeight,
-            text: 'M',
+            text: AppStrings.heightUnitMeasurementText,
           ),
         ],
       ),

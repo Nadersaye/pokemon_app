@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokemon_app/core/utils/app_strings.dart';
 import 'custom_weight_text.dart';
 
 class CustomPokemonDetailsRow extends StatelessWidget {
@@ -12,10 +13,10 @@ class CustomPokemonDetailsRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         CustomWeightText(
-          text: 'weight',
+          text: AppStrings.weightText,
         ),
         CustomWeightText(
-          text: 'height',
+          text: AppStrings.heightText,
         ),
       ],
     );

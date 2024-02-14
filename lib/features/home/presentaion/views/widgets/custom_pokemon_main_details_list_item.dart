@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pokemon_app/core/functions/cached_my_network_image.dart';
 import 'package:pokemon_app/features/home/domain/entities/pokemon_details_entity.dart';
-import 'package:pokemon_app/features/home/presentaion/views/widgets/custom_pokemon_types_list_view.dart';
+import 'custom_pokemon_main_details_list_item_data.dart';
 
 class CustomPokemonMainDetailsListItem extends StatelessWidget {
   final PokemonDetailsEntity pokemon;
@@ -11,6 +11,7 @@ class CustomPokemonMainDetailsListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.only(bottom: 10),
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -27,16 +28,7 @@ class CustomPokemonMainDetailsListItem extends StatelessWidget {
         cachedMyNetworkImage(
             imageUrl: pokemon.pokemonImageUrl, width: 80, height: 100),
         const Gap(10),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(pokemon.pokemonName),
-            const Gap(10),
-            Text('#${pokemon.pokemonId}'),
-            const Gap(10),
-            CustomPokemonTypesListView(types: pokemon.pokemonTypes!),
-          ],
-        )
+        CustomPokemonMainDetailsListItemData(pokemon: pokemon)
       ]),
     );
   }
