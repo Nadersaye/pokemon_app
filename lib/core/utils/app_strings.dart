@@ -9,4 +9,8 @@ abstract class AppStrings {
   static const welcomeViewTitle = 'welcome !';
   static const homePokemonViewTitle = 'List of Pokemons';
   static const homepokemonViewButtonText = 'PokeApi webpage';
+  static const weightText = 'weight';
+  static const heightText = 'height';
+  static const weightUnitMeasurementText = 'kg';
+  static const heightUnitMeasurementText = 'M';
 }
