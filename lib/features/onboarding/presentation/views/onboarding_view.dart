@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../home/presentaion/views/widgets/custom_appbar.dart';
 import 'widgets/onboarding_view_body.dart';
 
 class OnboardingView extends StatelessWidget {
@@ -6,12 +7,10 @@ class OnboardingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Pokemon App'),
-        ),
-        body: const OnboardingViewBody(),
+        appBar: CustomAppBar(),
+        body: OnboardingViewBody(),
       ),
     );
   }
