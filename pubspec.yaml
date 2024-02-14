@@ -35,10 +35,8 @@ dependencies:
   dio: ^5.4.0
   flutter:
     sdk: flutter
-  flutter_animation_progress_bar: ^2.3.1
   flutter_riverpod: ^2.4.10
   gap: ^3.0.1
-  get_it: ^7.6.7
   go_router: ^13.2.0
   hive: ^2.2.3
   hive_flutter: ^1.1.0
@@ -76,15 +74,20 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: sans-serif-condensed
+      fonts:
+        - asset: assets/fonts/LandasansMedium-ALJ6m.otf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
+
+    - family: monospace
+      fonts:
+        - asset: assets/fonts/MonospaceBold.ttf
+
+    - family: serif-monospace
+      fonts:
+        - asset: assets/fonts/Courier Prime Bold.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
