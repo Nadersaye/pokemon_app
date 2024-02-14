@@ -1,32 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:pokemon_app/core/utils/app_colors.dart';
 import 'package:pokemon_app/core/utils/size_config.dart';
 
 abstract class AppStyles {
   static TextStyle style34(BuildContext context) => TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 34),
-      color: Colors.black,
-      //fontFamily: 'monospace',
+      color: AppColors.blackColor,
+      fontFamily: 'monospace',
       fontWeight: FontWeight.normal);
   static TextStyle style24(BuildContext context) => TextStyle(
         fontSize: getResponsiveFontSize(context, fontSize: 24),
-        color: const Color(0xff616161),
-        //fontFamily: "sans-serif-condensed-medium",
+        color: AppColors.grey38Color,
+        fontFamily: "sans-serif-condensed",
         fontWeight: FontWeight.bold,
       );
   static TextStyle style23(BuildContext context) => TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 23),
-      color: const Color(0xff8c8c8c),
-      //fontFamily: "sans-serif-condensed-medium",
+      color: AppColors.gray55Color,
+      fontFamily: "sans-serif-condensed",
       fontWeight: FontWeight.bold);
   static TextStyle style20(BuildContext context) => TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 20),
-      color: Colors.black, //const Color(0xff8c8c8c), //atk
-      //fontFamily: 'monospace', // 'sans-serif-condensed-medium',
+      color: AppColors.blackColor,
+      fontFamily: 'monospace',
       fontWeight: FontWeight.bold);
   static TextStyle style16(BuildContext context) => TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 16),
-      color: const Color(0xff616161),
-      //fontFamily: "serif-monospace",
+      color: AppColors.grey38Color,
+      fontFamily: "serif-monospace",
       fontWeight: FontWeight.bold);
 }
 
